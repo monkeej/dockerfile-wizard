@@ -4,7 +4,7 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: openjdk:8-jdk-build-deploy
+  IMAGE_NAME: openjdk
 
   IMAGE_TAG: 8-jdk-build-deploy
 
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/openjdk:8-jdk-build-deploy:8-jdk-build-deploy
+      - image: $DOCKER_USERNAME/openjdk:8-jdk-build-deploy
         environment:
           <<: *image_config
 
